@@ -1,17 +1,16 @@
-#Project's Title
-  ##Shopping Cart Kata
-#Project Description
+#  Shopping Cart Kata
+## Overview
 This project is about creating an application that works as a shopping checkout system. The concept is that there are four products available, each with a price per unit. Some products have a special price when bought in certain quantities (e.g. 3 of product A costs 140, not 150).
 The checkout system consumes a data source (e.g. JSON file) and returns the sub total when queried.
 There are two functions in this application which are analysed below.
 The application opens the JSON file and initially converts it into a list of dictionaries.
-	The first function taps into each list item and then creates a dictionary with product labels as keys, and values for their respective quantities.
+- The first function taps into each list item and then creates a dictionary with product labels as keys, and values for their respective quantities.
 Then, it validates that the input data are correct before proceeding with calculations.
 The application will terminate and throw an error message if:
-•	Wrong item code is given.
-•	Quantity value is either string or decimal.
-•	Quantity value is a negative number.
-> The second function performs the calculations for the sub total of A and B.
+  - Wrong item code is given.
+  - Quantity value is either string or decimal.
+  - Quantity value is a negative number.
+- The second function performs the calculations for the sub total of A and B.
 The function considers the discounts and applies them to every other number of items bought. For example, product A costs £50 / unit, and one can buy 3 units for £140, if someone buys 6 units, they pay twice the discount price: 140+140= £280.
 Finally, the function returns the sub total for printing out.
 
