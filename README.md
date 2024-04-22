@@ -5,7 +5,7 @@ The checkout system consumes a data source (e.g. JSON file) and returns the sub 
 There are two functions in this application which are analysed below.
 The application opens the JSON file and initially converts it into a list of dictionaries.
 - The first function taps into each list item and then creates a dictionary with product labels as keys, and values for their respective quantities.
-Then, it validates that the input data are correct before proceeding with calculations.
+Then, it validates if the input data are correct before proceeding with calculations, otherwise it terminates the application in a controlled fashion.
 The application will terminate and throw an error message if:
   - Wrong item code is given.
   - Quantity value is either string or decimal.
