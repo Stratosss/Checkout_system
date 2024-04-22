@@ -8,7 +8,7 @@ file = open("newOrder.json")
 fileLines = json.load(file) # Creates a list file containing the dictionaries
 
 def fileFiltering (file):
-    temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))}
+    temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))} # Creates a dictionary out of the list items
     item_list = ["A","B","C","D"]
     
     for k,v in temp_dict.items():
