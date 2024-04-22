@@ -14,4 +14,4 @@ The application will terminate and throw an error message if:
 The function considers the discounts and applies them to every other number of items bought. For example, product A costs £50 / unit, and one can buy 3 units for £140, if someone buys 6 units, they pay twice the discount price: 140+140= £280.
 Finally, the function returns the sub total for printing out.
 
-The application comes with a separate testing file, that performs eleven individual tests that checks for all the above, to ensure that the application functions as it should. The testing file utilises the unit test framework library of Python.
+The application comes with a separate testing file, that performs eleven individual tests that check for all the above, to ensure that the application functions as it should. The testing file utilises the unit test framework library of Python.
