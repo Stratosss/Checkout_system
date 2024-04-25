@@ -31,8 +31,8 @@ pricebook = {
     }
 }
 def fileFiltering (file):
-    temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))}
-    item_list = ["A","B","C","D"]
+    temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))} #creates a dictionary out of the list of dictionaries
+    item_list = ["A","B","C","D"]    #item list for reference
     
     for k,v in temp_dict.items():
         if k not in item_list:
@@ -51,7 +51,7 @@ def calculator(order):
     for key,value in order.items():
             for k,v in pricebook.items():
                 if key == k:
-                    if isinstance(pricebook[k]["discount"], int):
+                    if isinstance(pricebook[k]["discount"], int):    #checks if the item has a discount price
                         if value % pricebook[k]["quantity"] == 0:
                             total =  total +  ((value/pricebook[k]["quantity"]) * pricebook[k]["discount"])
                         elif value < pricebook[k]["quantity"]:
