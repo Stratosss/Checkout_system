@@ -13,7 +13,6 @@ pricebook = {
         "quantity" : 3,
         "price" : 50
     },
-    
     "B" : {
         "discount" : 60,
         "quantity" : 2,
