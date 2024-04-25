@@ -29,6 +29,7 @@ pricebook = {
         "price" : 12
     }
 }
+
 def fileFiltering (file):
     temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))} #creates a dictionary out of the list of dictionaries
     item_list = ["A","B","C","D"]    #item list for reference
