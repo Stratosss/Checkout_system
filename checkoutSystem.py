@@ -65,8 +65,8 @@ def calculator(order):
             
 if __name__=="__main__":                   
     dict = fileFiltering(fileLines)
-    sub_total = calculator(dict)
-    print("Subtotal due: £",sub_total)
+    total = calculator(dict)
+    print("Total amount due: £",total)
     
 
 
