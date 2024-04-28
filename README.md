@@ -1,4 +1,4 @@
-#  Shopping Cart Kata
+#  Checkout system
 ## Overview
 This project concerns a shopping checkout system application. The concept is that there are four products available, each with a price per unit. Some products have a special price when bought in certain quantities (e.g. 3 of product A costs 140, not 150).
 The checkout system consumes a data source (e.g. JSON file) and returns the sub total when queried.
