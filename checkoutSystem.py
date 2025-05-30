@@ -48,14 +48,13 @@ def fileFiltering (file):
 
 def calculator(order):
     total = 0
-    for key,value in order.items():
-            for k,v in pricebook.items():
-                if key == k:
-                    if isinstance(pricebook[k]["discount"], int):
-                        factor = math.floor(value/pricebook[k]["quantity"])
-                        total = total + factor*pricebook[k]["discount"] + ((value-(factor*pricebook[k]["quantity"]))*pricebook[k]["price"])
-                    else:
-                        total= total + value * pricebook[k]["price"]
+    for key, value in order.items():
+        item = pricebook[key]
+        if isinstance(item["discount"], int):
+            factor = value // item["quantity"]
+            total += factor * item["discount"] + (value - factor * item["quantity"]) * item["price"]
+        else:
+            total += value * item["price"]
     return total
             
 if __name__=="__main__":                   
