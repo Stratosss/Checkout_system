@@ -32,10 +32,9 @@ pricebook = {
 
 def fileFiltering (file):
     temp_dict = {file[i]['code']:file[i]['quantity'] for i in range(len(file))}
-    item_list = ["A","B","C","D"]
-    
+        
     for k,v in temp_dict.items():
-        if k not in item_list:
+        if k not in pricebook:
             print(f"Item code: {k}, not recognised.")
             sys.exit()
         elif not isinstance(v,int):
