@@ -7,7 +7,7 @@ try:
     file = open("newOrder.json")
     fileLines = json.load(file) # Creates a list file containing the dictionaries
 except JSONDecodeError: 
-        print(f"JSON value error")
+        print("JSON value error")
         sys.exit()
     
 pricebook = {
