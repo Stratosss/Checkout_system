@@ -1,12 +1,15 @@
 import math
 import json
 import sys
+from json import JSONDecodeError
 
-
-
-file = open("newOrder.json")
-fileLines = json.load(file) # Creates a list file containing the dictionaries
-
+try:
+    file = open("newOrder.json")
+    fileLines = json.load(file) # Creates a list file containing the dictionaries
+except JSONDecodeError: 
+        print(f"JSON value error")
+        sys.exit()
+    
 pricebook = {
     "A" : {
         "discount" : 140,
